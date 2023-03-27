@@ -40,4 +40,17 @@ class TokoModel extends Model
     {
         return $this->findAll();
     }
+    public function getToko($idToko)
+    {
+        return $this->query("SELECT * FROM ".$this->table." WHERE id_toko= ".$idToko)->getRowArray();
+    }
+
+    public function insertToko($dataReq)
+    {
+
+        $sql = 'INSERT INTO '.$this->table.' (nama_toko, deskripsi_toko,alamat_toko, id_pemilik ) 
+        VALUES ("'.$dataReq["namaToko"].'","'.$dataReq["deskripsi"].'","'.$dataReq["alamat"].'", 1)';
+
+        return $this->query($sql);
+    }
 }

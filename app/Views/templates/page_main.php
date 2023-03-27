@@ -22,15 +22,8 @@
     <title><?= $title ?></title>
 </head>
 <body>
-    <?= $this->include('toko_supplier/templates/sidebar') ?>
-
-    
+  
     <?= $this->renderSection('content') ?>
-    
 
-    <script type="text/javascript" src="<?= base_url("resources/scripts/soft-ui-dashboard.min.js") ?>"></script>
-    <script type="text/javascript" src="<?= base_url("resources/scripts/core/bootstrap.min.js") ?>"></script>
-    <script type="text/javascript" src="<?= base_url("resources/scripts/core/popper.min.js") ?>"></script>
-    <script type="text/javascript" src="<?= base_url("resources/scripts/core/jquery-3.6.3.min.js") ?>"></script>
 </body>
 </html>

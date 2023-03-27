@@ -41,6 +41,23 @@ class Pemilik extends Migration
                 'constraint'     => 14,
                 'null'           => true
             ],
+            'no_hp' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 14,
+                'null'           => true
+            ],
+            'foto_profil' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 25,
+                'default'        => 'foto_profil.png',
+                'null'           => false
+            ],
+            'role'  => [
+                'type'           => 'TINYINT',
+                'constraint'     => 1,
+                'null'           => false,
+                'default'        => 0
+            ]
         ]);
 
         $this->forge->addKey('id_pemilik', true);
