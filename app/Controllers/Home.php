@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $data = [
+            'title' => 'Dashboard Supplier',
+            // 'supplier' => $this->supplier->findAll()
+        ];
+        return view('toko_supplier/dashboard_supplier', $data);
     }
 }
